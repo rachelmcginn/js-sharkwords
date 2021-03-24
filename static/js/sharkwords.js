@@ -17,9 +17,15 @@ const WORDS = [
 let numWrong = 0;
 
 // Loop over the chars in `word` and create divs.
-//
+//The blank lines are actually div elements with the class letter-box — 
+//we used CSS to make any element with the letter-box class look like a blank line. 
+//The generated divs should also have an additional class whose value is a letter in the word. 
+//Later, we’ll use those classes to help us check if the word contains a certain letter or not.
+
 const createDivsForChars = (word) => {
-  // Replace this with your code
+  for(const letter of word) {
+    $('#word-container').append(`<div class="letter-box" ${letter}></div>`);
+  }
 };
 
 // Loop over each letter in `ALPHABET` and generate buttons.
